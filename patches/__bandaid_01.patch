@@ -1,0 +1,74 @@
+--- a/asiou/portfolio/views.py
++++ b/asiou/portfolio/views.py
+@@ -1371,6 +1371,12 @@
+         if request_report.office.id == 62:
+             general_code_office_list.append(182)
+
++        # педагог доп.обр = старший педагог доп.обр и наоборот
++        if request_report.office.id == 249:
++            general_code_office_list.append(53)
++        if request_report.office.id == 53:
++            general_code_office_list.append(249)
++
+
+         #педагогический стаж
+         ped_lenghts_all=u'нет'
+@@ -7079,50 +7085,51 @@
+                 except:
+                     pass
+                 if organization_activities_accounting_progress_attendance['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[organization_activities_accounting_progress_attendance['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[organization_activities_accounting_progress_attendance['comment_number']])
+
+                 try:
+                     planning_organization_physical_education['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=92).number_in_html
+                 except:
+                     pass
+                 if planning_organization_physical_education['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[planning_organization_physical_education['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[planning_organization_physical_education['comment_number']])
+
+                 try:
+                     planning_monitoring_health_status_physical_development_students['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=93).number_in_html
+                 except:
+                     pass
+                 if planning_monitoring_health_status_physical_development_students['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[planning_monitoring_health_status_physical_development_students['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[planning_monitoring_health_status_physical_development_students['comment_number']])
+
+                 try:
+                     planning_acquisition_sports_equipment['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=94).number_in_html
+                 except:
+                     pass
+                 if planning_acquisition_sports_equipment['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[planning_acquisition_sports_equipment['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[planning_acquisition_sports_equipment['comment_number']])
+
+                 try:
+                     organization_medical_examinations_testing_students_for_physical_training['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=96).number_in_html
+                 except:
+                     pass
+                 if organization_medical_examinations_testing_students_for_physical_training['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[organization_medical_examinations_testing_students_for_physical_training['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[organization_medical_examinations_testing_students_for_physical_training['comment_number']])
+
+                 try:
+                     planning_control_provide_protection_life_health_students['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=97).number_in_html
+                 except:
+                     pass
+                 if planning_control_provide_protection_life_health_students['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[planning_control_provide_protection_life_health_students['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[planning_control_provide_protection_life_health_students['comment_number']])
+
+                 try:
+                     providing_wellness_physical_activities_outside_school_vacation_time['comment_number'] = ASIOU_Dict_Att_Section_Number.objects.get(office=report.office_id,sort=report.sort,version=report.version,key_section=99).number_in_html
+                 except:
+                     pass
+                 if providing_wellness_physical_activities_outside_school_vacation_time['comment_number'] in checked_rows_by_table:
+-                    mass_id_val.append(checked_rows_by_table[providing_wellness_physical_activities_outside_school_vacation_time['comment_number']][0])
++                    mass_id_val.append(checked_rows_by_table[providing_wellness_physical_activities_outside_school_vacation_time['comment_number']])
+
++                mass_id_val = [item for sublist in mass_id_val for item in sublist]
+
+                 organization_activities_accounting_progress_attendance['data'], planning_organization_physical_education['data'], planning_monitoring_health_status_physical_development_students['data'],\
+                 planning_acquisition_sports_equipment['data'], organization_medical_examinations_testing_students_for_physical_training['data'], planning_control_provide_protection_life_health_students['data'],\
