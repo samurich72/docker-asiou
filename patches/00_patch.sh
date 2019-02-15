@@ -16,3 +16,4 @@ patch -p 1 -i patches/10_optimize_export_rhd.patch
 patch -p 1 -i patches/11_secret_key_from_environ.patch
 
 patch -p 1 -i patches/__bandaid_01.patch
+patch -p 1 -i patches/__bandaid_02.patch

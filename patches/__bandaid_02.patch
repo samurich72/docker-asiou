@@ -1,0 +1,31 @@
+--- a/static/menu_prof.xml
++++ b/static/menu_prof.xml
+@@ -107,11 +107,15 @@
+ 		<subitem name="Индивидуальный анализ" uri="/cto/reports_by_individ/" title="Индивид" role="oou_psy:rw"/>
+    		<subitem name="Отчет по квадрантам" uri="/cto/report_quadrant/" title="Отчет по квадрантам" role="oou_psy:rw"/>
+ 	</item>
+-    <item id="gto" name="Мониторинг ГТО" uri="/gto/" title="Мониторинг ГТО в ОУ" nolink="true" role="oou_admin:rw,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r">
+-        <subitem name="Комплекс ГТО (федеральный)" uri="/gto/gto_f/" title="Заполнение комплекса ГТО (федерального)" role="oou_admin:rw,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r"></subitem>
+-        <subitem name="Отчеты по ГТО (федеральному)" uri="/gto/gto_f_reports/" title="Отчеты по ГТО (федеральному)" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r"></subitem>
+-        <!-- <subitem name="Экспорт результатов ГТО (федерального)" uri="/gto/gto_f_export/" title="Экспорт результатов ГТО (федерального)" role="oou_admin:rw,oou_school_admin:rw,oou_school_admin_nk:rw,oou_gto:rw"></subitem>-->        
+-    	<subitem name="Заявки на 2018г" uri="/gto/gto_f_test_2018/" title="Заявки" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>
++    <item id="gto" name="ГТО" uri="/gto/" title="ГТО" nolink="true" role="oou_admin:rw,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r">
++        <!--<subitem name="Мониторинг ГТО" uri="/gto/gto_f/" title="Заполнение мониторинга по комплексу ГТО (федеральному)" role="oou_admin:rw,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r"></subitem>-->
++        <subitem name="Отчеты по ГТО" uri="/gto/gto_f_reports/" title="Отчеты по мониторингу ГТО (федеральному)" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_gto:rw,oou_school_admin:r,oou_school_admin_nk:r"></subitem>
++        <!-- <subitem name="Экспорт результатов ГТО (федерального)" uri="/gto/gto_f_export/" title="Экспорт результатов ГТО (федерального)" role="oou_admin:rw,oou_school_admin:rw,oou_school_admin_nk:rw,oou_gto:rw"></subitem>
++        <subitem name="Комплекс ГТО (региональный до 2015г)" uri="/gto/gto/" title="Заполнение комплекса ГТО (регионального)" role="oou_admin:rw,oou_teacher:rw,oou_region_admin:r,oou_mr_admin:r,oou_school_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>
++        <subitem name="Отчеты по ГТО (региональному до 2015г)" uri="/gto/gto_reports/" title="Отчеты по ГТО (региональному)" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_school_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>
++        <subitem name="Экспорт результатов ГТО (регионального до 2015г)" uri="/gto/gto_export/" title="Экспорт результатов ГТО (регионального)" role="oou_admin:rw,oou_school_admin:rw,oou_school_admin_nk:rw,oou_gto:rw"></subitem> -->
++    	<subitem name="Заявки по V-VI ступеням" uri="/gto/gto_f_test_2018/" title="Заявки по V-VI ступеням" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>
++    	<!--<subitem name="Заявки на Фестиваль" uri="/gto/gto_f_test_2018f/" title="Заявки на фестиваль" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>-->
+     	<subitem name="Выгрузка в МТ" uri="/gto/exporting_gto_page/" title="Выгрузка в МТ" role="oou_admin:r,oou_region_admin:r,oou_mr_admin:r,oou_school_admin_nk:r,oou_gto:rw"></subitem>
+     </item>
+     <item id="event" name="Мероприятия" uri="/event/event_r/" title="Мероприятия, в которых принимают участие обучающиеся" role="oou_admin:rw,oou_region_admin:rw,oou_mr_admin:rw,oou_school_admin:rw,oou_school_admin_nk:rw,oou_teacher:rw,oou_teacher_gr:rw,oou_trusted_user:rw,oou_half_trusted_user:rw"></item>
+@@ -131,6 +135,7 @@
+         <subitem name="Методист" uri="/person_rezult/b_a_metodist/" title="Для методистов" role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw"></subitem>
+         <subitem name="Преподаватель-организатор ОБЖ" uri="/person_rezult/b_a_teacher_organizer_OBG/" title="Для преподавателей-организаторов ОБЖ" role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw,oou_half_trusted_user:rw"></subitem>
+         <subitem name="Руководитель физического воспитания" uri="/person_rezult/b_a_head_physical_education/" title="Для руководителей физического воспитания" role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw,oou_half_trusted_user:rw"></subitem>
++        <subitem name="Инструктор по труду" uri="/person_rezult/b_a_instructor_work/" title="Для инструкторов по труду" role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw"></subitem>
+     </item>
+     <item id="person_rezult_sprav" name="Справочники для Межаттестационного периода" uri="/person_rezult/" title="Данные за межаттестационный период" nolink="true" role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw">
+         <subitem name="Список компетенций" uri="/person_rezult/b_a_competence/" title="Для учителей СКОУ, социальных педагогов, воспитателей ООУ, общежитий и т.п." role="oou_teacher:rw,oou_trusted_user:rw,oou_pedagog:rw,oou_half_trusted_user:rw"></subitem>
